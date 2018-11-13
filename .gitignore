@@ -1,3 +1,6 @@
 # don't store cached files
 cache/
 
+#users
+config/users/
+

@@ -5,7 +5,8 @@ a,
 #single-portfolio .close-folio-item:hover, 
 .single-table.featured .btn.btn-primary, 
 .contact-info ul li a:hover, 
-#footer .footer-bottom a
+#footer .footer-bottom a,
+.breadcrumb a
 {
   color: #0e9ac8;
 }

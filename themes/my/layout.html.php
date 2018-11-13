@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  
   <link href="<?php echo site_url();?>themes/my/assets/css/lightbox.css" rel="stylesheet">
   <link href="<?php echo site_url();?>themes/my/assets/css/main.css" rel="stylesheet">
+  <link href="<?php echo site_url();?>themes/my/assets/css/blog.css" rel="stylesheet">
   <link id="css-preset" href="<?php echo site_url();?>themes/my/assets/css/presets/preset7.css" rel="stylesheet">
   <link href="<?php echo site_url();?>themes/my/assets/css/responsive.css" rel="stylesheet">
 
