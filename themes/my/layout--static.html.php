@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <?php echo head_contents();?>
-	
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $title;?></title>
@@ -115,8 +113,9 @@
 				</ul>
 			</li>
             <li class="scroll"><a href="/#services">Преимущества</a></li> 
-            <li class="scroll"><a href="/faq">Частые Вопросы</a></li>
+            <li><a href="/faq">Частые Вопросы</a></li>
             <li class="scroll"><a href="/#contact">Контакты</a></li> 
+			<li class="scroll"><a href="/#purchase" ><i class="fas fa-cart-arrow-down fa-lg"></i></a></li>
           </ul>
         </div>
       </div>

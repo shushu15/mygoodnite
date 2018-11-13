@@ -1,5 +1,5 @@
 <!-- Main Content -->
-<div class="container">
+<div class="container" id="content-body">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
         <?php if (config('category.info') === 'true'):?>
@@ -30,22 +30,22 @@
                     </h2>
                 </a>
                 <p class="post-meta">
-					<span itemprop="datePublished"><?php echo date('d F Y', $p->date) ?></span> - опубликовано в
-					<span itemprop="articleSection"><?php echo $p->category ?></span> автор
+					<span itemprop="datePublished"><?php echo date('d F Y', $p->date) ?></span> - <?php echo i18n('Published_in');?>
+					<span itemprop="articleSection"><?php echo $p->category ?></span> <?php echo i18n('Author');?>
 					<span itemprop="author"><a href="<?php echo $p->authorUrl ?>"><?php echo $p->author ?></a></span> 
 					<?php if (disqus_count()) { ?> - 
-						<span><a href="<?php echo $p->url ?>#disqus_thread"> Комментарии</a></span>
+						<span><a href="<?php echo $p->url ?>#disqus_thread"> <?php echo i18n('Comments');?></a></span>
 					<?php } elseif (facebook()) { ?> -
-						<a href="<?php echo $p->url ?>#comments"><span><fb:comments-count href=<?php echo $p->url ?>></fb:comments-count> Комментарии</span></a>
+						<a href="<?php echo $p->url ?>#comments"><span><fb:comments-count href=<?php echo $p->url ?>></fb:comments-count>  <?php echo i18n('Comments');?></span></a>
 					<?php } ?> 
 				</p>
 				    <p itemprop="articleBody">
 						<?php echo get_thumbnail($p->body) ?>
 						<?php echo get_teaser($p->body, $p->url) ?>
-						<?php if (config('teaser.type') === 'trimmed'):?><a href="<?php echo $p->url;?>">Дальше</a><?php endif;?>
+						<?php if (config('teaser.type') === 'trimmed'):?><a href="<?php echo $p->url;?>"><?php echo i18n('More');?></a><?php endif;?>
 					</p> 
+				<hr>
 			</div> 	
-            <hr>
 			</div>
         <?php endforeach; ?>
         <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
@@ -53,12 +53,12 @@
             <ul class="pager">
                 <?php if (!empty($pagination['prev'])): ?>
                 <li class="prev pull-left">
-                    <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; Следующие Записи</a>
+                    <a class="prev page-numbers" href="?page=<?php echo $page - 1 ?>" rel="prev">&larr; <?php echo i18n('Newer');?> <?php echo i18n('Posts');?></a>
                 </li>
                 <?php endif;?>
                 <?php if (!empty($pagination['next'])): ?>
                 <li class="next pull-right">
-                    <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next"> Прошлые Записи &rarr;</a>
+                    <a class="next page-numbers" href="?page=<?php echo $page + 1 ?>" rel="next"> <?php echo i18n('Older');?> <?php echo i18n('Posts');?> &rarr;</a>
                 </li>
                 <?php endif;?>
             </ul>

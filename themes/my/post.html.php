@@ -47,12 +47,12 @@
                 <ul class="pager">
                     <?php if (!empty($next)): ?>
                     <li class="next pull-left">
-                        <a href="<?php echo($next['url']); ?>" rel="next">&larr; Следующие Записи</a>
+                        <a href="<?php echo($next['url']); ?>" rel="next">&larr; <?php echo i18n('Newer');?> <?php echo i18n('Posts');?></a>
                     </li>
                     <?php endif;?>
                     <?php if (!empty($prev)): ?>
                     <li class="prev pull-right">
-                        <a href="<?php echo($prev['url']); ?>" rel="prev">Прошлые Записи &rarr;</a>
+                        <a href="<?php echo($prev['url']); ?>" rel="prev"><?php echo i18n('Older');?> <?php echo i18n('Posts');?> &rarr;</a>
                     </li>
                     <?php endif;?>
                 </ul>

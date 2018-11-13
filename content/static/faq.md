@@ -176,5 +176,8 @@
 	   
 
 	</div>
-  </section><!--/#faq-content-->
+
+	
+  </section>
+  
   

@@ -2191,6 +2191,7 @@ function generate_rss($posts)
         ->title(blog_title())
         ->description(blog_description())
         ->url(site_url())
+		->language(config('language')) 		
         ->appendTo($feed);
 
     foreach ($posts as $p) {

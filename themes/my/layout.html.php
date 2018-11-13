@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <?php echo head_contents();?>
-	
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $title;?></title>
@@ -114,8 +112,9 @@
 				</ul>
 			</li>
             <li class="scroll"><a href="/#services">Преимущества</a></li> 
-            <li class="scroll"><a href="/faq">Частые Вопросы</a></li>
+            <li><a href="/faq">Частые Вопросы</a></li>
             <li class="scroll"><a href="/#contact">Контакты</a></li> 
+			<li class="scroll"><a href="/#purchase" ><i class="fas fa-cart-arrow-down fa-lg"></i></a></li>
           </ul>
         </div>
       </div>
@@ -135,7 +134,7 @@
                     <?php if (isset($is_post)):?>
                         <div class="post-heading">
                             <h1><?php echo $p->title;?></h1>
-                            <span class="meta">Опубликовано в <?php echo $p->category;?> автор <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo date('F d, Y', $p->date);?></span>
+                            <span class="meta"><?php echo i18n('Published_in');?> <?php echo $p->category;?> <?php echo i18n('Author');?> <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo date('F d, Y', $p->date);?></span>
                         </div>
                     <?php endif;?>
                     <?php if (isset($is_page) || isset($is_subpage)):?>
@@ -154,7 +153,7 @@
                     <?php endif;?>
                     <?php if (isset($is_blog)):?>
                         <div class="page-heading">
-                            <h1>Blog</h1>
+                            <h1><?php echo i18n('Blog');?></h1>
                             <hr class="small">
                             <span class="subheading"><?php echo blog_title();?></span>
                         </div>
@@ -187,9 +186,16 @@
                             <span class="subheading"><?php echo blog_title();?></span>
                         </div>
                     <?php endif;?>
-                    <?php if (isset($is_404) || isset($is_404search)):?>
+                    <?php if (isset($is_404)):?>
                         <div class="site-heading">
                             <h1>Error 404!</h1>
+                            <hr class="small">
+                            <span class="subheading"><?php echo blog_tagline();?></span>
+                        </div>
+                    <?php endif;?>
+                    <?php if (isset($is_404search)):?>
+                        <div class="site-heading">
+                            <h1>Поиск по ключевым словам. Ничего не найдено!</h1>
                             <hr class="small">
                             <span class="subheading"><?php echo blog_tagline();?></span>
                         </div>
@@ -243,7 +249,7 @@
 				<li><a class="twitter" href=<?php echo config('social.facebook');?>" data-toggle="tooltip" title="GOODNITE Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li> 
 				<li><a class="skype" href="#" data-toggle="tooltip" title="GOODNITE Skype ID: "><i class="fab fab fa-skype"></i></a></li>
 				<li><a class="whatsapp" href="#" data-toggle="tooltip" title="GOODNITE WhatsApp: +7 921 10000000"><i class="fab fa-whatsapp"></i></a></li>
-                <li><a class="envelope" href="<?php echo site_url();?>feed/rss" data-toggle="tooltip" title="RSS канал"><i class="fas fa-rss fa-inverse"></i></a></li>            
+                <li><a class="rss" href="<?php echo site_url();?>feed/rss" data-toggle="tooltip" title="RSS канал"><i class="fas fa-rss fa-inverse"></i></a></li>            
 					
 			</ul>
 			</div>

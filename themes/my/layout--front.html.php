@@ -152,7 +152,7 @@
 				</ul>
 			</li>			
             <li class="scroll"><a href="#services">Преимущества</a></li> 
-            <li class="scroll"><a href="/faq">Частые Вопросы</a></li>
+            <li><a href="/faq">Частые Вопросы</a></li>
             <li class="scroll"><a href="#contact">Контакты</a></li> 
 			<li class="scroll"><a href="#purchase" data-toggle="modal" data-target="#exampleModalCenter"><i class="fas fa-cart-arrow-down fa-lg"></i></a></li>
 			
@@ -652,97 +652,41 @@
       </div>
       <div class="blog-posts">
         <div class="row">
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/blog/blog-openning-picture.jpg" alt=""></a> 
-              <div class="post-meta">
-                <span><i class="fas fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fas fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fas fa-pencil-alt"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Авторизованный дилер</a></h3>
-              <span class="date">Nov 26, 2017</span>
-              <span class="cetagory">в <strong>Статьи</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Мы являемся авторизованным дистрибьютором и дилером компании Nitetronic. Между нами заключено Дистрибьюторское соглашение, которое является основанием для ведения деятельности на территории России и
-стран СНГ...</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-            <div class="post-thumb">
-              <div id="post-carousel"  class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#post-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#post-carousel" data-slide-to="1"></li>
-                  <li data-target="#post-carousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="item active">
-                    <a href="#"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/blog/nitetronic2-1.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/blog/nitetronic3-2.jpg" alt=""></a>
-                  </div>
-                  <div class="item">
-                    <a href="#"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/blog/nitetronic6.jpg" alt=""></a>
-                  </div>
-                </div>                               
-                <a class="blog-left-control" href="#post-carousel" role="button" data-slide="prev"><i class="fas fa-angle-left"></i></a>
-                <a class="blog-right-control" href="#post-carousel" role="button" data-slide="next"><i class="fas fa-angle-right"></i></a>
-              </div>                            
-              <div class="post-meta">
-                <span><i class="fas fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fas fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fas fa-image"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Авторизованный дилер</a></h3>
-              <span class="date">Nov 30, 2017</span>
-              <span class="cetagory">в <strong>Статьи</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Мы являемся авторизованным дистрибьютором и дилером компании Nitetronic. Между нами заключено Дистрибьюторское соглашение, которое является основанием для ведения деятельности на территории России и
-стран СНГ.</p>
-            </div>
-          </div>
-          <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="800ms">
-            <div class="post-thumb">
-              <a href="#"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/blog/goodnite_bed_500.jpg" alt=""></a>
-              <div class="post-meta">
-                <span><i class="fas fa-comments-o"></i> 3 Comments</span>
-                <span><i class="fas fa-heart"></i> 0 Likes</span> 
-              </div>
-              <div class="post-icon">
-                <i class="fas fa-video"></i>
-              </div>
-            </div>
-            <div class="entry-header">
-              <h3><a href="#">Авторизованный дилер</a></h3>
-              <span class="date">Dec 01, 2017</span>
-              <span class="cetagory">в <strong>Статьи</strong></span>
-            </div>
-            <div class="entry-content">
-              <p>Мы являемся авторизованным дистрибьютором и дилером компании Nitetronic. Между нами заключено Дистрибьюторское соглашение, которое является основанием для ведения деятельности на территории России и
-стран СНГ. </p>
-            </div>
-          </div>                    
+		<?php $lists = recent_posts(true, 3);?>
+		<?php foreach ($lists as $l):?>
+			<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
+				<div class="post-thumb">
+					<a href="<?php echo $l->url;?>"><img class="img-responsive" src="<?php echo get_image($l->body);?>" alt=""></a> 
+					<div class="post-meta">
+						<span><i class="fas fa-eye"></i> Просмотров <?php echo $l->views;?> </span>
+						<span><i class="fas fa-comments-o"></i> Комментариев 0 </span> 
+					</div>
+					<div class="post-icon">
+						<i class="fas fa-pencil-alt"></i>
+					</div>
+				</div>
+				<div class="entry-header">
+					<h3><a href="<?php echo $l->url;?>"><?php echo shorten($l->title,120);?></a></h3>
+					<span class="date"><?php echo date('d M Y', $l->date);?></span>
+					<span class="cetagory">в <strong><?php echo $l->category;?></strong></span>
+				</div>
+				<div class="entry-content">
+					<p><?php echo shorten($l->body, 200); ?>...</p>
+				</div>
+			</div>
+		<?php endforeach;?>
         </div>
         <div class="load-more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="500ms">
-          <a href="#" class="btn-loadmore"><i class="fas fa-repeat"></i> Загрузить еще</a>
+          <a href="/blog" class="btn-loadmore"><i class="fas fa-repeat"></i> Перейти в блог</a>
         </div>                
       </div>
     </div>
   </section><!--/#blog-->
+		
+  <section id="dynamic">
 
       <?php echo content();?>
+  </section>
 
   
   <section id="contact">
@@ -799,6 +743,8 @@
       </div>
     </div>        
   </section><!--/#contact-->
+  
+  
   <footer id="footer">
     <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
       <div class="container">

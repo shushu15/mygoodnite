@@ -409,7 +409,7 @@ a.carousel-control.right { right: 0; background: none; border: 0;}
   margin-top: 5px;
 }
 
-
+ 
 
 /*************************
 ********main-preface*******
@@ -1180,6 +1180,9 @@ ul.address {
 }
 #footer .social-icons ul li a.whatsapp:hover {
   background-color: #25D366;
+}
+#footer .social-icons ul li a.rss:hover {
+  background-color:  #f26522;
 }
 /*
 .bs-slider{

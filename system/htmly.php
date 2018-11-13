@@ -1904,7 +1904,7 @@ get('/api/json', function () {
 // Show the RSS feed
 get('/feed/rss', function () {
 
-    header('Content-Type: application/rss+xml');
+    header('Content-Type: application/rss+xml; charset=utf-8');
 
     // Show an RSS feed with the 30 latest posts
     echo generate_rss(get_posts(null, 1, config('rss.count')));

@@ -29,6 +29,7 @@ jQuery(function($) {
 		prevScrollpos = currentScrollPos;
 	});
 	
+
 	
     // Animate something, by adding animation class that stored in data-effect field 
     function animate(elem){
@@ -53,11 +54,12 @@ jQuery(function($) {
 //--- end collapse mobile after click	
 // smooth moving inside one-page . Please note, that real href is not executed, so 
 // TODO: execute the href is needed (example - 'purchase'
+/*
 	$('.navbar-collapse ul .scroll a').on('click', function() {  
 		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
 		return false;
 	});
-	
+*/	
 	
 	//Initiat WOW JS
 	new WOW().init();

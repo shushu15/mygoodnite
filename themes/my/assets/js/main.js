@@ -24,12 +24,15 @@
 		} else {
 			$('.main-nav').removeClass('navbar-fixed-top');
 		}
+		Scroll();
 	});
 	
-	// Navigation Scroll
+/*	// Navigation Scroll
 	$(window).scroll(function(event) {
 		Scroll();
 	});
+*/	
+	
 /*
 // https://github.com/twbs/bootstrap/issues/12852     - colapse on mobiles after click	
 	$(document).on('click','.navbar-collapse.in',function(e) {
@@ -56,7 +59,8 @@
 // smooth moving inside one-page . Please note, that real href is not executed, so 
 // TODO: execute the href is needed (example - 'purchase'
 	$('.navbar-collapse ul .scroll a').on('click', function() {  
-		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		$('html, body').animate({scrollTop: $(this.hash).offset().top }, 1000);
+		Scroll();		// force redrawing
 		return false;
 	});
 	
@@ -105,23 +109,26 @@
 		var contentTop      =   [];
 		var contentBottom   =   [];
 		var winTop      =   $(window).scrollTop();
-		var rangeTop    =   200;
-		var rangeBottom =   500;
+//		var rangeTop    =   200;
+//		var rangeBottom =   500;
 		$('.navbar-collapse').find('.scroll a').each(function(){
-			contentTop.push( $( $(this).attr('href') ).offset().top);
-			contentBottom.push( $( $(this).attr('href') ).offset().top + $( $(this).attr('href') ).height() );
+			contentTop.push( $( $(this.hash) ).offset().top -10 );
+			contentBottom.push( $( $(this.hash) ).offset().top -10  + $( $(this.hash) ).height()+10 );
 		})
 		$.each( contentTop, function(i){
-			if ( winTop > contentTop[i] - rangeTop ){
-				$('.navbar-collapse li.scroll')
-				.removeClass('active')
-				.eq(i).addClass('active');			
+			if ( winTop >= contentTop[i]  ){
+				if (winTop <= contentBottom[i] ) {
+					$('.navbar-collapse li.scroll')
+					.removeClass('active')
+					.eq(i).addClass('active');			
+				}
 			}
 		})
 	};
 
 	$('#tohash').on('click', function(){
-		$('html, body').animate({scrollTop: $(this.hash).offset().top - 5}, 1000);
+		$('html, body').animate({scrollTop: $(this.hash).offset().top }, 1000);
+		Scroll();		// force redrawing
 		return false;
 	});
 	
