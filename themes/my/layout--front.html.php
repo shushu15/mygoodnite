@@ -699,6 +699,7 @@
 Мы гарантируем, что любые данные, полученные от Вас, не будут разглашены или использованы в иных целях, кроме как для работы в ходе нашего совместного проекта.
 Исключением могут являться случаи, когда Вы даете специальное разрешение на это, или это требуется для проведения судебного или иного государственного расследования.</p>
           </div>
+		  <div class="form_status"> </div>
         </div>
         <div class="contact-form wow fadeIn" data-wow-duration="1000ms" data-wow-delay="600ms">
           <div class="row">
@@ -717,7 +718,7 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="text" name="subject" class="form-control" placeholder="Тема" required="required">
+                  <input id="subject1" type="text" name="subject" class="form-control" placeholder="Тема" required="required">
                 </div>
                 <div class="form-group">
                   <textarea name="message" id="message1" class="form-control" rows="4" placeholder="Напишите сообщение" required="required"></textarea>

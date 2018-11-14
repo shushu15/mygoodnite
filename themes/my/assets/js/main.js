@@ -245,79 +245,73 @@
 
 
 	// Contact form
-	var form = $('#main-contact-form');
-	form.submit(function(event){
+	$('#main-contact-form').submit(function(event){
 		event.preventDefault();
 		// Serialize the form data.
-		var formData = $(form).serialize(); 
+		var form = $(this);
+		var formData = form.serializeArray(); 
 		
-		var form_status = $('<div class="form_status"></div>');
+		var form_status = $('div.form_status');
 		$.ajax({
+			async: true,
 			cache: false,
 			type: 'POST', 
-			url: $(this).attr('action'),
+			url:   form.attr('action'),
 			data: formData, 
 			beforeSend: function(){
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Сообщение посылается...</p>').fadeIn() );
-			}
-		})
-		.done(function(response){
-			form_status.html('<p class="text-success">Спасибо за сообщение. В ближайшее время мы свяжемся с Вами</p>').delay(3000).fadeOut();
-			// Clear the form. - not whole
-			//$('#name').val('');
-			//$('#email').val('');
-			$('#subject').val(''); 
-			$('#message1').val(''); 
-			
-		})
-		.fail(function(response) {
-			// Set the message text.
-			if (response.responseText !== '') {
-				form_status.html('<p class="text-warning">${response.responseText}</p>').delay(3000).fadeOut();
-			} else {
-				form_status.html('<p class="text-warning">Опс! Что-то пошло не так и нам не удалось доставить ваше сообщение.</p>').delay(3000).fadeOut();
-			}
-		}); 		
+			},
+			success: function(response) { //Данные отправлены успешно
+				form_status.html('<p class="text-success">Спасибо за сообщение. В ближайшее время мы свяжемся с Вами</p>').delay(3000).fadeOut();
+				// Clear the form. - not whole
+				//$('#name').val('');
+				//$('#email').val('');
+				$('#subject1').val(''); 
+				$('#message1').val(''); 
+			},
+			error: function(response) { // Данные не отправлены
+				if (response.responseText !== '') {
+					form_status.html('<p class="text-warning">${response.responseText}</p>').delay(3000).fadeOut();
+				} else {
+					form_status.html('<p class="text-warning">Опс! Что-то пошло не так и нам не удалось доставить ваше сообщение.</p>').delay(3000).fadeOut();
+				}
+			}			
+		});
 	});
 
 	
-	// Contact form
-	var form = $('#purchase-form');
-	form.submit(function(event){
+	// Purchase form
+	$('#purchase-form').submit(function(event){
 		event.preventDefault();
 		// Serialize the form data.
-		var formData = $(form).serialize(); 
+		var form = $(this);
+		var formData = form.serializeArray(); 
 		
-		var form_status = $('<div class="form_purchase_status"></div>');
+		var form_status = $('div.form_purchase_status');
 		$.ajax({
+			async: true,
 			cache: false,
 			type: 'POST', 
-			url: $(this).attr('action'),
+			url:  form.attr('action'),
 			data: formData, 
 			beforeSend: function(){
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Заказ отправляется...</p>').fadeIn() );
-			}
+			},
+			success: function(response) { //Данные отправлены успешно
+				form_status.html('<p class="text-success">Спасибо за заказ. В ближайшее время мы свяжемся с Вами</p>').delay(3000).fadeOut();
+				$('#message').val(''); 
+				setTimeout(function() { 
+					$("#purchase_close").trigger('click');
+				}, 3000);
+			},
+			error: function(response) { // Данные не отправлены
+				if (response.responseText !== '') {
+					form_status.html('<p class="text-warning">${response.responseText}</p>').delay(3000).fadeOut();
+				} else {
+					form_status.html('<p class="text-warning">Опс! Что-то пошло не так и нам не удалось доставить ваше сообщение.</p>').delay(3000).fadeOut();
+				}
+			}			
 		})
-		.done(function(response){
-			form_status.html('<p class="text-success">Спасибо за заказ. В ближайшее время мы свяжемся с Вами</p>').delay(3000).fadeOut();
-			// Clear the form. - not whole
-			//$('#name').val('');
-			//$('#email').val('');
-			$('#subject').val(''); 
-			$('#message').val(''); 
-			setTimeout(function() { 
-				$("#purchase_close").trigger('click');
-			}, 3000);
-			
-		})
-		.fail(function(response) {
-			// Set the message text.
-			if (response.responseText !== '') {
-				form_status.html('<p class="text-warning">${response.responseText}</p>').delay(3000).fadeOut();
-			} else {
-				form_status.html('<p class="text-warning">Опс! Что-то пошло не так и нам не удалось доставить ваше сообщение.</p>').delay(3000).fadeOut();
-			}
-		}); 		
 	});
 	
 	//Google Map
