@@ -147,7 +147,7 @@
 					<li><a href="/category/news">Сонные новости</a></li>
 					<li><a href="/snoring">Что такое храп</a></li>
 					<li><a href="/clinical-study">Клинические исследования</a></li>
-					<li><a href="/community.html">Сообщество профессионалов</a></li>
+					<li><a href="/community">Сообщество профессионалов</a></li>
 					<li><a href="/blog">Блог</a></li>
 				</ul>
 			</li>			
