@@ -55,7 +55,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li id="wcons-topttl"><a href="#"><i class="fas fa-hashtag"></i>nitetronic goodnite™: умная подушка от храпа</a></li>
-								<li><a href="#"><i class="fas fa-phone"></i> +7 812 123 00 00</a></li>
+								<li><a href="#"><i class="fas fa-phone"></i> <?php echo config('site.phone');?></a></li>
 								<li><a href="#contact"><i class="fas fa-envelope" data-toggle="tooltip" title="Заполнить контактную форму"></i> info@mygoodnite.ru</a></li>
 							</ul>
 						</div>
@@ -107,7 +107,7 @@
         </div>
         <div class="item slide4">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig" data-animation-wipe="animated fadeOutLeftBig">Сейчас, приобретите <span>Smart-подушку goodnite</span> со скидкой 20% <strong>за 12990 рублей</strong></h1>
+            <h1 class="animated fadeInLeftBig" data-animation-wipe="animated fadeOutLeftBig">Сейчас, приобретите <span>Smart-подушку goodnite</span> со скидкой 20% <strong>за <?php echo config('site.pillow.price');?> рублей</strong></h1>
             <h2 class="animated fadeInRightBig" data-animation-wipe="animated fadeOut">хороший сон того стоит</h2>
             <a data-scroll class="btn btn-start animated fadeInUpBig" href="#purchase" data-animation-wipe="btn btn-start animated fadeOut">купить goodnite</a>
           </div>
@@ -347,7 +347,7 @@
         <div class="row" style="margin-top:20px; margin-bottom:0px;">
 	        <div class="text-center col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1">
 			  <a class="btn btn-primary btn-round-lg btn-lg" style="white-space:normal !important; word-wrap: break-word; word-break: normal;" href="#" data-toggle="modal" data-target="#exampleModalCenter">
-				<i class="fas fa-shopping-cart fa-lg"></i> Купить смарт-подушку nitetronic goodnite за 12990 руб. для хорошего сна</a>
+				<i class="fas fa-shopping-cart fa-lg"></i> Купить смарт-подушку nitetronic goodnite за  <?php echo config('site.pillow.price');?> руб. для хорошего сна</a>
 			</div>
 		</div>
       </div>
@@ -558,7 +558,7 @@
            </div>
  	      <div class="col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
 			<h2>Обновленная смарт-подушка от храпа goodnite™ по специальной цене</h2>
-			<h2><span style="text-decoration:line-through;">16240 руб.</span>  <span>12990 руб.</span></h2>
+			<h2><span style="text-decoration:line-through;"><?php echo config('site.pillow.oldprice');?> руб.</span>  <span><?php echo config('site.pillow.price');?> руб.</span></h2>
 			<div align="center">
 			<a class="btn btn-primary btn-round-lg btn-lg" style="white-space:normal !important; word-wrap: break-word; word-break: normal;" href="#" data-toggle="modal" data-target="#exampleModalCenter">
 				<i class="fas fa-shopping-cart fa-lg"></i> Заказать goodnite</a>
@@ -602,7 +602,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
 					<button type="submit" class="btn btn-submit">Отправить заказ</button>
-					<h4>Или позвоните по телефону 8(812) 123-00-00 для заказа.</h4>
+					<h4>Или позвоните по телефону <?php echo config('site.phone');?> для заказа.</h4>
 					<div class="form_purchase_status"></div>
 				</div>
 				</form> 
@@ -733,7 +733,7 @@
                 <p>Напишите сообщение или заказ на подушку goodnite.</p>
                 <ul class="address">
                   <li><i class="fas fa-map-marker"></i> <span> Адрес:</span> 195273, Россия, Санкт-Петербург, Пискаревский пр. 63, лит. А</li>
-                  <li><i class="fas fa-phone"></i> <span> Телефон:</span> +7 812 123 45 00 </li>
+                  <li><i class="fas fa-phone"></i> <span> Телефон:</span> <?php echo config('site.phone');?> </li>
                   <li><i class="fas fa-envelope"></i> <span> Email:</span><a href="mailto:info@mygoodnite.ru"> info@mygoodnite.ru</a></li>
                   <li><i class="fas fa-globe"></i> <span> Website:</span> <a href="http://www.mygoodnite.ru"> www.mygoodnite.ru</a></li>
                 </ul>
@@ -777,7 +777,7 @@
 				<li><a class="vk" href="https://vk.com/public158164066" data-toggle="tooltip" title="GOODNITE ВКонтакте: vk.com/public158164066"><i class="fab fa-vk"></i></a></li> 
 				<li><a class="twitter" href="https://twitter.com/GOODNITERU" data-toggle="tooltip" title="GOODNITE Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li> 
 				<li><a class="skype" href="#" data-toggle="tooltip" title="GOODNITE Skype ID: "><i class="fab fab fa-skype"></i></a></li>
-				<li><a class="whatsapp" href="#" data-toggle="tooltip" title="GOODNITE WhatsApp: +7 921 10000000"><i class="fab fa-whatsapp"></i></a></li>
+				<li><a class="whatsapp" href="#" data-toggle="tooltip" title="GOODNITE WhatsApp: <?php echo config('site.phone');?>"><i class="fab fa-whatsapp"></i></a></li>
 						
 			</ul>
 			</div>
