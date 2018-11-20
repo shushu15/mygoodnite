@@ -2928,6 +2928,8 @@ function get_youtube_id($url)
     }
 
     preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $url, $matches);
+//	error_log("***URL***=" . $url . "***");
+//	error_log("***MATCHES***=" . implode('#', $matches) . "***");
 
     return $matches[1];
 }
