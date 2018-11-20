@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Умная подушка от храпа nitetronic goodnite, единственная клинически опробованная smart-подушка, определяет положеие головы и поворачивает ее. Разработано в Германии">
+  <meta name="description" content="Умная подушка от храпа nitetronic goodnite, единственная клинически апробованная smart-подушка, определяет положение головы и поворачивает ее. Разработано в Германии">
   <meta name="author" content="MYGOODNITE">
   <title>Умная подушка от храпа goodnite</title>
   <link href="<?php echo site_url();?>themes/my/assets/css/bootstrap.min.css" rel="stylesheet">
