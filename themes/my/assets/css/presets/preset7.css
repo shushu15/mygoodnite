@@ -31,7 +31,7 @@ a:hover, a:focus  {
   border-color: #0c7ba0;
 }
   
-.about-info,  .circle-container {
+.about-info {
   border-color:  #0e9ac8;/*rgba(13,179,199, .2);*/
 } 
 

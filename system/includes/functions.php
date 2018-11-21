@@ -1762,6 +1762,7 @@ function get_thumbnail($text, $url = null)
 // Get image from post and Youtube thumbnail.
 function get_image($text)
 {
+	$thumbnail_name = 'mqdefault.jpg';
 	
 	if (is_string($text)) {  // as befroe
 		libxml_use_internal_errors(true);
@@ -1778,7 +1779,7 @@ function get_image($text)
 			$vidSource = $vidElement->getAttribute('src');
 			$fetch = explode("embed/", $vidSource);
 			if (isset($fetch[1])) {
-				$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/sddefault.jpg';
+				$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/' . $thumbnail_name;
 				return $vidThumb;
 			}
 		} else {
@@ -1788,7 +1789,7 @@ function get_image($text)
 		$post = $text;
 		//error_log("***POST_TYPE=" . $post->type); 
 		if (!empty($post->video)) {
-			$vidThumb = '//img.youtube.com/vi/' . $post->video . '/sddefault.jpg';
+			$vidThumb = '//img.youtube.com/vi/' . $post->video . '/' . $thumbnail_name;
 			return $vidThumb;
 		} else if (!empty($post->image)) {
 			return $post->image;
@@ -1808,7 +1809,7 @@ function get_image($text)
 				$vidSource = $vidElement->getAttribute('src');
 				$fetch = explode("embed/", $vidSource);
 				if (isset($fetch[1])) {
-					$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/sddefault.jpg';
+					$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/' . $thumbnail_name;
 					return $vidThumb;
 				}
 			} else {
