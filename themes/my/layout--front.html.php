@@ -656,13 +656,17 @@
 		<?php foreach ($lists as $l):?>
 			<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 				<div class="post-thumb">
-					<a href="<?php echo $l->url;?>"><img class="img-responsive" src="<?php echo get_image($l->body);?>" alt=""></a> 
+					<a href="<?php echo $l->url;?>"><img class="img-responsive" src="<?php echo get_image($l);?>" alt=""></a> 
 					<div class="post-meta">
 						<span><i class="fas fa-eye"></i> Просмотров <?php echo $l->views;?> </span>
 						<span><i class="fas fa-comments-o"></i> Комментариев 0 </span> 
 					</div>
 					<div class="post-icon">
+					<?php if (!empty($l->video)) { ?>
+						<i class="fas fa-video"></i>
+					<?php } else { ?>	
 						<i class="fas fa-pencil-alt"></i>
+					<?php } ?>
 					</div>
 				</div>
 				<div class="entry-header">

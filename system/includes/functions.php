@@ -1758,29 +1758,64 @@ function get_thumbnail($text, $url = null)
     }
 }
 
+//shu - to pass post also
 // Get image from post and Youtube thumbnail.
 function get_image($text)
 {
-    libxml_use_internal_errors(true);
-    $dom = new DOMDocument();
-    $dom->loadHtml($text);
-    $imgTags = $dom->getElementsByTagName('img');
-    $vidTags = $dom->getElementsByTagName('iframe');
-    if ($imgTags->length > 0) {
-        $imgElement = $imgTags->item(0);
-        $imgSource = $imgElement->getAttribute('src');
-        return $imgSource;
-    } elseif ($vidTags->length > 0) {
-        $vidElement = $vidTags->item(0);
-        $vidSource = $vidElement->getAttribute('src');
-        $fetch = explode("embed/", $vidSource);
-        if (isset($fetch[1])) {
-            $vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/sddefault.jpg';
-            return $vidThumb;
-        }
-    } else{
-	   return false;
-    }
+	
+	if (is_string($text)) {  // as befroe
+		libxml_use_internal_errors(true);
+		$dom = new DOMDocument();
+		$dom->loadHtml($text);
+		$imgTags = $dom->getElementsByTagName('img');
+		$vidTags = $dom->getElementsByTagName('iframe');
+		if ($imgTags->length > 0) {
+			$imgElement = $imgTags->item(0);
+			$imgSource = $imgElement->getAttribute('src');
+			return $imgSource;
+		} elseif ($vidTags->length > 0) {
+			$vidElement = $vidTags->item(0);
+			$vidSource = $vidElement->getAttribute('src');
+			$fetch = explode("embed/", $vidSource);
+			if (isset($fetch[1])) {
+				$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/sddefault.jpg';
+				return $vidThumb;
+			}
+		} else {
+			return false; 
+		}
+	} else {  // whole post passed
+		$post = $text;
+		//error_log("***POST_TYPE=" . $post->type); 
+		if (!empty($post->video)) {
+			$vidThumb = '//img.youtube.com/vi/' . $post->video . '/sddefault.jpg';
+			return $vidThumb;
+		} else if (!empty($post->image)) {
+			return $post->image;
+		} else {
+			libxml_use_internal_errors(true);
+			$textb = $post->body;
+			$dom = new DOMDocument();
+			$dom->loadHtml($textb);
+			$imgTags = $dom->getElementsByTagName('img');
+			$vidTags = $dom->getElementsByTagName('iframe');
+			if ($imgTags->length > 0) {
+				$imgElement = $imgTags->item(0);
+				$imgSource = $imgElement->getAttribute('src');
+				return $imgSource;
+			} elseif ($vidTags->length > 0) {
+				$vidElement = $vidTags->item(0);
+				$vidSource = $vidElement->getAttribute('src');
+				$fetch = explode("embed/", $vidSource);
+				if (isset($fetch[1])) {
+					$vidThumb = '//img.youtube.com/vi/' . $fetch[1] . '/sddefault.jpg';
+					return $vidThumb;
+				}
+			} else {
+				return false; 
+			}
+		}
+	}
 }
 
 // Return edit tab on post
@@ -2179,6 +2214,7 @@ function not_found()
     ));
     die();
 }
+
 
 // Turn an array of posts into an RSS feed
 function generate_rss($posts)
