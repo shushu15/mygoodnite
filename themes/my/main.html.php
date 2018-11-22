@@ -30,7 +30,7 @@
                     </h2>
                 </a>
                 <p class="post-meta">
-					<span itemprop="datePublished"><?php echo date('d F Y', $p->date) ?></span> - <?php echo i18n('Published_in');?>
+					<span itemprop="datePublished"><?php echo strftime(config("date_format"), $p->date); ?></span> - <?php echo i18n('Published_in');?>
 					<span itemprop="articleSection"><?php echo $p->category ?></span> <?php echo i18n('Author');?>
 					<span itemprop="author"><a href="<?php echo $p->authorUrl ?>"><?php echo $p->author ?></a></span> 
 					<?php if (disqus_count()) { ?> - 

@@ -19,7 +19,7 @@
                             $i++; ?>
                             <li class="<?php echo $class; ?>">
                                 <span><a href="<?php echo $p->url ?>"><?php echo $p->title ?></a></span>, 
-                                <span><?php echo date('F d, Y', $p->date); ?></span> - Опубликовано в <span><?php echo $p->category ?></span>
+                                <span><?php echo strftime(config("date_format"), $p->date); ?></span> - Опубликовано в <span><?php echo $p->category ?></span>
                             </li>
                         <?php endforeach; ?>
                     </ul>

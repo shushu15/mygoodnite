@@ -134,7 +134,7 @@
                     <?php if (isset($is_post)):?>
                         <div class="post-heading">
                             <h1><?php echo $p->title;?></h1>
-                            <span class="meta"><?php echo i18n('Published_in');?> <?php echo $p->category;?> <?php echo i18n('Author');?> <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo date('F d, Y', $p->date);?></span>
+                            <span class="meta"><?php echo i18n('Published_in');?> <?php echo $p->category;?> <?php echo i18n('Author');?> <a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a> on <?php echo strftime(config("date_format"), $p->date); ?></span>
                         </div>
                     <?php endif;?>
                     <?php if (isset($is_page) || isset($is_subpage)):?>
