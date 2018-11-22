@@ -6,6 +6,7 @@
   <meta name="description" content="Умная подушка от храпа nitetronic goodnite, единственная клинически апробованная smart-подушка, определяет положение головы и поворачивает ее. Разработано в Германии">
   <meta name="author" content="MYGOODNITE">
   <title>Умная подушка от храпа goodnite</title>
+  <link rel="canonical" href="<?php echo $canonical; ?>" />
   <link href="<?php echo site_url();?>themes/my/assets/css/bootstrap.min.css" rel="stylesheet">
   <link href="<?php echo site_url();?>themes/my/assets/css/animate.min.css" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">  

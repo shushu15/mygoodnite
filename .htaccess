@@ -84,6 +84,10 @@ DirectoryIndex index.php
 # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 # RewriteRule ^ http://%1%{REQUEST_URI} [L,R=301]
 
+	RewriteBase /
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
 # If your site is running in a VirtualDocumentRoot at http://example.com/,
 # uncomment the following line:
 # RewriteBase /
