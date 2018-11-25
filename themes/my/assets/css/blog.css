@@ -104,8 +104,8 @@
   margin-right: 0;
 }
 
-.toolbox .share a {
-  margin-left: 5px;
+.toolbox .share a, .toolbox .tags a {
+  margin-left: 8px;
 }
 
 #comments {
@@ -143,7 +143,7 @@ blockquote.category {
  box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
  }
  
-#content-body  .post-preview  img {
+#content-body  .post-preview  img,  #content-body .post-body img{
   display: block;
   max-width: 100%;
   height: auto;

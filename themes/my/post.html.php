@@ -1,8 +1,8 @@
 <!-- Post Content -->
 <article>
-    <div class="container">
+    <div class="container" id="content-body">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-xs-12 col-xs-offset-0 post-body">
                 <?php if (login()) { echo tab($p); } ?> 
                 <?php if (!empty($p->video)) { ?>
                     <div class="featured featured-video embed-responsive embed-responsive-16by9">
@@ -24,7 +24,7 @@
                         <a target="_blank" href="<?php echo $p->link ?>"><i class="fas fa-external-link"></i> <?php echo $p->link ?></a>
                     </div>
                 <?php } ?>
-                <?php echo $p->body; ?>
+				<?php echo $p->body; ?>
                 <div class="toolbox">
                     <span class="category"><i class="fas fa-folder"></i> <?php echo $p->category;?></span> 
                     <span class="tags"><i class="fas fa-tags"></i> <?php echo $p->tag;?></span> 
