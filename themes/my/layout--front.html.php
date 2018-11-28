@@ -379,7 +379,7 @@
                     <p>разработчика подушки goodnite</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="message-nitetronic.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/message-nitetronic.html" data-single_url="message-nitetronic.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/message-to-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -400,7 +400,7 @@
                     <p>как попробовать подушку в работе</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="goodnite-quick-start.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/goodnite-quick-start.html" data-single_url="goodnite-quick-start.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/goodnite-start-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -422,7 +422,7 @@
                     <p>статистика вашего сна и храпа</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="nitelink2-intro.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/nitelink2-intro.html" data-single_url="nitelink2-intro.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/nitelink2-title-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -444,7 +444,7 @@
                     <p>видео, объясняющее работу</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="blue-man.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/blue-man.html" data-single_url="blue-man.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/torino-blue-man-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -466,7 +466,7 @@
                     <p>и уход за подушкой</p>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="use-care-goodnite.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/use-care-goodnite.html" data-single_url="use-care-goodnite.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/feel-the-difference-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -487,7 +487,7 @@
                     <h3>Сравнение с другими средствами от храпа</h3>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="comparing-other-snoring.html"><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/comparing-other-snoring.html" data-single_url="comparing-other-snoring.html"><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/compare-pencils-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -508,7 +508,7 @@
                     <h3>Технические параметры устройства goodnite</h3>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="technical-info.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/technical-info.html" data-single_url="technical-info.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/pillow-box-unit-toon-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
@@ -529,7 +529,7 @@
                     <h3>Отзывы покупателей</h3>
                   </div>
                   <div class="folio-overview">
-                    <span class="folio-link"><a class="folio-read-more" href="#" data-single_url="customer-review.html" ><i class="fas fa-link"></i></a></span>
+                    <span class="folio-link"><a class="folio-read-more" href="/customer-review.html" data-single_url="customer-review.html" ><i class="fas fa-link"></i></a></span>
                     <span class="folio-expand"><a href="<?php echo site_url();?>themes/my/assets/images/portfolio/customer-review-toon-w.jpg" data-lightbox="portfolio"><i class="fas fa-search-plus"></i></a></span>
                   </div>
                 </div>
