@@ -4,3 +4,7 @@ cache/
 #users
 config/users/
 
+# don't store content files
+content/
+
+
