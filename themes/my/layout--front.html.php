@@ -64,9 +64,9 @@
 					<div class="col-sm-4">
 						<div class="top-social-icons pull-right">
 							<ul class="nav  navbar-nav">
-								<li><a href="https://www.facebook.com/goodniteru/" data-toggle="tooltip" title="Goodnite Facebook: fb.com/goodniteru"><i class="fab fa-facebook"></i></a></li>
-								<li><a href="https://twitter.com/GOODNITERU" data-toggle="tooltip" title="Goodnite Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li>
-								<li><a href="https://vk.com/public158164066" data-toggle="tooltip" title="Goodnite ВКонтакте: vk.com/public158164066"><i class="fab fa-vk"></i></a></li>
+								<li><a href=<?php echo config('social.facebook') ?> data-toggle="tooltip" title="Goodnite Facebook: @nitetronic.goodnite"><i class="fab fa-facebook"></i></a></li>
+								<li><a href=<?php echo config('social.twitter') ?> data-toggle="tooltip" title="Goodnite Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li>
+								<li><a href=<?php echo config('social.vk') ?> data-toggle="tooltip" title="Goodnite ВКонтакте: vk.com/public174639310"><i class="fab fa-vk"></i></a></li>
 								<li><a href="#" data-toggle="tooltip" title="Goodnite Skype ID: "><i class="fab fa-skype"></i></a></li>
 								<li><a href="#" data-toggle="tooltip" title="Goodnite WhatsApp: +7 921 9642700"><i class="fab fa-whatsapp"></i></a></li>
 							</ul>
@@ -778,12 +778,13 @@
 			<div class="social-icons">
 			<ul>
 				<li><a class="envelope" href="mailto:info@mygoodnite.ru"><i class="fas fa-envelope"></i></a></li>
-				<li><a class="facebook" href="https://www.facebook.com/goodniteru/" data-toggle="tooltip" title="GOODNITE Facebook: fb.com/goodniteru"><i class="fab fa-facebook"></i></a></li>
-				<li><a class="vk" href="https://vk.com/public158164066" data-toggle="tooltip" title="GOODNITE ВКонтакте: vk.com/public158164066"><i class="fab fa-vk"></i></a></li> 
-				<li><a class="twitter" href="https://twitter.com/GOODNITERU" data-toggle="tooltip" title="GOODNITE Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li> 
+				<li><a href=<?php echo config('social.facebook') ?> data-toggle="tooltip" title="Goodnite Facebook: @nitetronic.goodnite"><i class="fab fa-facebook"></i></a></li>
+				<li><a href=<?php echo config('social.twitter') ?> data-toggle="tooltip" title="Goodnite Twitter: @GOODNITERU"><i class="fab fa-twitter"></i></a></li>
+				<li><a href=<?php echo config('social.vk') ?> data-toggle="tooltip" title="Goodnite ВКонтакте: vk.com/public174639310"><i class="fab fa-vk"></i></a></li>
 				<li><a class="skype" href="#" data-toggle="tooltip" title="GOODNITE Skype ID: "><i class="fab fab fa-skype"></i></a></li>
 				<li><a class="whatsapp" href="#" data-toggle="tooltip" title="GOODNITE WhatsApp: <?php echo config('site.phone');?>"><i class="fab fa-whatsapp"></i></a></li>
-						
+		
+		
 			</ul>
 			</div>
 		  </div>
