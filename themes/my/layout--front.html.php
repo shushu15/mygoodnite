@@ -21,12 +21,12 @@
     <script src="assets/js/respond.min.js"></script>
   <![endif]-->
   
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="<?php echo site_url();?>themes/my/assets/images/favicon.ico">
   <link rel="apple-touch-icon" sizes="120x120" href="<?php echo site_url();?>themes/my/assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="<?php echo site_url();?>themes/my/assets/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="<?php echo site_url();?>themes/my/assets/images/favicon-16x16.png">
-  <link rel="manifest" href="site.webmanifest">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="mask-icon" href="<?php echo site_url();?>themes/my/assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">  
@@ -740,7 +740,7 @@
                   <li><i class="fas fa-map-marker"></i> <span> Адрес:</span> 195273, Россия, Санкт-Петербург, Пискаревский пр. 63, лит. А</li>
                   <li><i class="fas fa-phone"></i> <span> Телефон:</span> <?php echo config('site.phone');?> </li>
                   <li><i class="fas fa-envelope"></i> <span> Email:</span><a href="mailto:info@mygoodnite.ru"> info@mygoodnite.ru</a></li>
-                  <li><i class="fas fa-globe"></i> <span> Website:</span> <a href="http://www.mygoodnite.ru"> www.mygoodnite.ru</a></li>
+                  <li><i class="fas fa-globe"></i> <span> Website:</span> <a href="https://www.mygoodnite.ru"> www.mygoodnite.ru</a></li>
                 </ul>
               </div>                            
             </div>
