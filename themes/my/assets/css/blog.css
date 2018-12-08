@@ -49,6 +49,9 @@
   }
 } 
 
+.post-thumb .post-meta {
+  background: rgba(0, 0, 0, 0.2);
+}
 .post-heading h1 {
   font-size: 24px;
 } 
