@@ -76,3 +76,7 @@ a:hover, a:focus  {
 .twitter-icon .fa-twitter:after {
 	border-color: #0e9ac8 transparent transparent;
 }
+
+#twitter h4 a, #twitter .item a {
+	background-color: rgba(255,255,255,.6); 
+}

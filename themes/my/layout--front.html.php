@@ -628,18 +628,18 @@
           <div class="col-sm-8 col-sm-offset-2">
             <div class="twitter-icon text-center">
               <i class="fab fa-twitter"></i>
-              <h4>Наш канал в Twitter @MYGOODNITE</h4>
+              <h4>Наш канал в Twitter <a href="https://twitter.com/goodniteru">@goodniteru</a></h4>
             </div>
             <div id="twitter-carousel" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                 <div class="item active wow fadeIn" data-wow-duration="1000ms" data-wow-delay="300ms">
-                  <p>Презентация MYGOODNITE обновленной smart-системы nitronic goodnite и мобильного приложения Nitelink2 <a href="#"><span>#MYGOODNITE #храп #стопхрап #goodnite</span> http://bit.ly/1qlgwav</a></p>
+                  <p>Сравнение устройств от храпа. Что такое храп? Это низкие и вибрирующие звуки, которые издают некоторые люди во время сна из-за расслабления мягкого нёба и язычка... <a href="https://twitter.com/goodniteru/status/1069904474490179584"><span>#MYGOODNITE #храп #стопхрап #goodnite</span></a></p>
                 </div>
                 <div class="item">
-                  <p>Презентация MYGOODNITE обновленной smart-системы nitronic goodnite и мобильного приложения Nitelink2 <a href="#"><span>#MYGOODNITE #храп #стопхрап #goodnite</span> http://bit.ly/1qlgwav</a></p>
+                  <p>#Храп и #семейные отношения <a href="https://twitter.com/goodniteru/status/1068573320206065664"><span>#MYGOODNITE #храп #семейныеотношения</span></a></p>
                 </div>
                 <div class="item">                                
-                  <p>Презентация MYGOODNITE обновленной smart-системы nitronic goodnite и мобильного приложения Nitelink2 <a href="#"><span>#MYGOODNITE #храп #стопхрап #goodnite</span> http://bit.ly/1qlgwav</a></p>
+                  <p>Презентация MYGOODNITE обновленной smart-системы nitronic goodnite и мобильного приложения Nitelink2 <a href="https://twitter.com/goodniteru/status/1069541145422766080"><span>#ПодушкаОтХрапа #храп #Nitelink #goodnite</span></a></p>
                 </div>
               </div>                        
             </div>                    
@@ -789,8 +789,6 @@
 				<li><a href=<?php echo config('social.vk') ?> data-toggle="tooltip" title="Goodnite ВКонтакте: vk.com/public174639310"><i class="fab fa-vk"></i></a></li>
 				<li><a class="skype" href="#" data-toggle="tooltip" title="GOODNITE Skype ID: "><i class="fab fab fa-skype"></i></a></li>
 				<li><a class="whatsapp" href="#" data-toggle="tooltip" title="GOODNITE WhatsApp: <?php echo config('site.phone');?>"><i class="fab fa-whatsapp"></i></a></li>
-		
-		
 			</ul>
 			</div>
 		  </div>
