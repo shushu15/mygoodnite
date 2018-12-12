@@ -179,7 +179,7 @@
 
 			<p>Смарт-подушка помогает избавиться от храпа в домашних условиях с максимальной эффективностью и комфортом!</p>
 			
-			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/goodnite-anti-snore.jpg" style="opacity: 0.75;" alt="">
+			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/goodnite-anti-snore.jpg" style="opacity: 0.75;" alt="Спите без храпа с подушкой nitetronic goodnite">
           </div>
         </div>
         <div class="col-sm-5">
@@ -248,7 +248,7 @@
 			</ul>
           </div>
           <div  class="col-sm-5">
-			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic2.jpg" alt="">
+			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic2.jpg" alt="Комплектация подушки против храпа">
           </div>
         </div> 
       </div>
@@ -369,7 +369,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/message-to.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/message-to.jpg" alt="К нашим покупателям">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -390,7 +390,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/goodnite-start-toon.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/goodnite-start-toon.jpg" alt="Первый запуск подушки">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -412,7 +412,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/nitelink2-title-toon.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/nitelink2-title-toon.jpg" alt="Приложение для телефона">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -434,7 +434,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/torino-blue-man.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/torino-blue-man.jpg" alt="Принцип работы">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -456,7 +456,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/feel-the-difference.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/feel-the-difference.jpg" alt="Уход и использование">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -478,7 +478,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInRightBig" data-wow-duration="1000ms" data-wow-delay="300ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/compare-pencils.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/compare-pencils.jpg" alt="Сравнение средств от храпа">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -499,7 +499,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/pillow-box-unit-toon.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/pillow-box-unit-toon.jpg" alt="Технические данные">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -520,7 +520,7 @@
         <div class="col-sm-3 col-xs-6">
           <div class="folio-item wow fadeInLeftBig" data-wow-duration="1000ms" data-wow-delay="400ms">
             <div class="folio-image">
-              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/customer-review-toon.jpg" alt="">
+              <img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/portfolio/customer-review-toon.jpg" alt="Отзывы покупателей">
             </div>
             <div class="overlay">
               <div class="overlay-content">
@@ -553,19 +553,25 @@
   
     <div class="container">
 	
-	<div class="row">
+		<div itemscope itemtype="http://schema.org/Product" class="row">
 	      <div class="col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-			<span class="pull-right"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/main-purchase.jpg" alt=""></span>
+			<span class="pull-right"><img class="img-responsive" itemprop="image" src="<?php echo site_url();?>themes/my/assets/images/main-purchase.jpg" alt="купить подушку от храпа goodnite"></span>
            </div>
  	      <div class="col-sm-6 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-			<h2>Обновленная смарт-подушка от храпа goodnite™ по специальной цене</h2>
-			<h2><span style="text-decoration:line-through;"><?php echo config('site.pillow.oldprice');?> руб.</span>  <span><?php echo config('site.pillow.price');?> руб.</span></h2>
+			<h2 itemprop="name">Обновленная смарт-подушка от храпа goodnite™ по специальной цене</h2>
+			<meta itemprop="brand" content="Nitetronic goodnite">
+			<div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+				<h2><span style="text-decoration:line-through;"><?php echo config('site.pillow.oldprice');?> руб.</span>  <span><?php echo config('site.pillow.price');?> руб.</span></h2>
+				<meta itemprop="price" content="<?php echo config('site.pillow.price');?>">
+				<meta itemprop="priceCurrency" content="RUB">
+				<meta itemprop="availability" content="PreOrder" />
+			</div>	
 			<div align="center">
 			<a class="btn btn-primary btn-round-lg btn-lg" style="white-space:normal !important; word-wrap: break-word; word-break: normal;" href="#" data-toggle="modal" data-target="#exampleModalCenter">
 				<i class="fas fa-shopping-cart fa-lg"></i> Заказать goodnite</a>
 			</div>
 			
-			<ul>
+			<ul itemprop="description">
 			<li>Более удобная для сна</li>
 			<li>Улучшенный алгоритм для точного определения храпа</li>
 			<li>Расширенный анализ в приложении Nitelink2 для смартфона</li>
@@ -762,12 +768,12 @@
 		  </div>
           <div class="col-sm-6 col-lg-4">
 				<div class="footer-logo">
-					<a href="/"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic-LOGO_header_transparent.png" alt="" style="margin: auto;"></a>
+					<a href="/"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic-LOGO_header_transparent.png" alt="nitetronic logo" style="margin: auto;"></a>
 				</div>
 		  </div>
           <div class="col-sm-3 col-lg-4">
 				<div class="footer-logo">
-				<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/german-border.png" alt="" style="margin: auto;">
+				<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/german-border.png" alt="Разработано в Германии" style="margin: auto;">
 				<div class="centered">Разработано в Германии</div>
 				</div>
 		  </div>
