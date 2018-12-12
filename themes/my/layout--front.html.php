@@ -625,7 +625,7 @@
       <a class="twitter-right-control" href="#twitter-carousel" role="button" data-slide="next"><i class="fas fa-angle-right"></i></a>
       <div class="container">
         <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
+          <div class="col-sm-10 col-sm-offset-1">
             <div class="twitter-icon text-center">
               <i class="fab fa-twitter"></i>
               <h4>Наш канал в Twitter <a href="https://twitter.com/goodniteru">@goodniteru</a></h4>
@@ -636,7 +636,7 @@
                   <p>Сравнение устройств от храпа. Что такое храп? Это низкие и вибрирующие звуки, которые издают некоторые люди во время сна из-за расслабления мягкого нёба и язычка... <a href="https://twitter.com/goodniteru/status/1069904474490179584"><span>#MYGOODNITE #храп #стопхрап #goodnite</span></a></p>
                 </div>
                 <div class="item">
-                  <p>#Храп и #семейные отношения <a href="https://twitter.com/goodniteru/status/1068573320206065664"><span>#MYGOODNITE #храп #семейныеотношения</span></a></p>
+                  <p>#Храп и #семейные отношения. Рассмотрим одну из частых ситуаций, в которой один из супругов страдает храпом... <a href="https://twitter.com/goodniteru/status/1068573320206065664"><span>#MYGOODNITE #храп #семейныеотношения</span></a></p>
                 </div>
                 <div class="item">                                
                   <p>Презентация MYGOODNITE обновленной smart-системы nitronic goodnite и мобильного приложения Nitelink2 <a href="https://twitter.com/goodniteru/status/1069541145422766080"><span>#ПодушкаОтХрапа #храп #Nitelink #goodnite</span></a></p>
