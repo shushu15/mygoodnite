@@ -804,7 +804,7 @@
             <p>&copy; 2018 Goodnite. Smart-подушка от храпа.</p>
           </div>
           <div class="col-sm-6">
-            <p class="pull-right">Разработка <a href="http://mygoodnite.ru">#GOODNITE</a></p>
+            <p class="pull-right">Разработка <a href="<?php echo site_url();?>">#MYGOODNITE</a></p>
           </div>
         </div>
       </div>
