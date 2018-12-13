@@ -17,13 +17,7 @@
   <link href="<?php echo site_url();?>themes/my/assets/css/blog.css" rel="stylesheet">
   <link id="css-preset" href="<?php echo site_url();?>themes/my/assets/css/presets/preset7.css" rel="stylesheet">
   <link href="<?php echo site_url();?>themes/my/assets/css/responsive.css" rel="stylesheet">
-  
-
-  <!--[if lt IE 9]>
-    <script src="<?php echo site_url();?>themes/my/assets/js/html5shiv.js"></script>
-    <script src="<?php echo site_url();?>themes/my/assets/js/respond.min.js"></script>
-  <![endif]-->
-  
+   
   <link href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="<?php echo site_url();?>themes/my/assets/images/favicon.ico">
   <link rel="apple-touch-icon" sizes="120x120" href="<?php echo site_url();?>themes/my/assets/images/apple-touch-icon.png">
