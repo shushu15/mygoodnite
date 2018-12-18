@@ -7,6 +7,13 @@ ErrorDocument 404 /index.php
 # Set the default handler.
 DirectoryIndex index.php
 
+Redirect 301 /community.html /community
+Redirect 301 /clinical-study.html /clinical-study
+Redirect 301 /news.html /category/news
+Redirect 301 /snoring.html /snoring
+Redirect 301 /blog.html /blog
+
+
 # Requires mod_expires to be enabled.
 <IfModule mod_expires.c>
 
@@ -94,7 +101,7 @@ RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
 	RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 	
 	RewriteRule ^index\.html$ / [R=301,L]	
-
+	
 # If your site is running in a VirtualDocumentRoot at http://example.com/,
 # uncomment the following line:
 # RewriteBase /
