@@ -268,7 +268,7 @@
            </div>
           </div> 
           <div class="text-center col-sm-6">
-			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/Optimized-Nitetronic_Tech_Drawing_with_Rus_Labels_654.jpg" alt="">
+			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/Optimized-Nitetronic_Tech_Drawing_with_Rus_Labels_654.jpg" alt="Сон без храпа с умной подушкой">
           </div> 
         </div>
       </div>
@@ -664,7 +664,7 @@
 		<?php foreach ($lists as $l):?>
 			<div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms">
 				<div class="post-thumb">
-					<a href="<?php echo $l->url;?>"><img class="img-responsive" src="<?php echo get_image($l);?>" alt=""></a> 
+					<a href="<?php echo $l->url;?>"><img class="img-responsive" src="<?php echo get_image($l);?>" alt="<?php echo shorten($l->title,80);?>"></a> 
 					<div class="post-meta">
 						<span><i class="fas fa-eye"></i> Просмотров <?php echo $l->views;?> </span>
 						<span><i class="fas fa-comments-o"></i> Комментариев 0 </span> 

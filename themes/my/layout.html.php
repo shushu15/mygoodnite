@@ -223,12 +223,12 @@
 		  </div>
           <div class="col-sm-6 col-lg-4">
 				<div class="footer-logo">
-					<a href="/"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic-LOGO_header_transparent.png" alt="" style="margin: auto;"></a>
+					<a href="/"><img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/nitetronic-LOGO_header_transparent.png" alt="Nitetronic logo" style="margin: auto;"></a>
 				</div>
 		  </div>
           <div class="col-sm-3 col-lg-4">
 				<div class="footer-logo">
-				<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/german-border.png" alt="" style="margin: auto;">
+				<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/german-border.png" alt="Разработано в Германии" style="margin: auto;">
 				<div class="centered">Разработано в Германии</div>
 				</div>
 		  </div>
