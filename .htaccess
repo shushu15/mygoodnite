@@ -12,6 +12,7 @@ Redirect 301 /clinical-study.html /clinical-study
 Redirect 301 /news.html /category/news
 Redirect 301 /snoring.html /snoring
 Redirect 301 /blog.html /blog
+Redirect 301 /faq.html /faq
 
 
 # Requires mod_expires to be enabled.
