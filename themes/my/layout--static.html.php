@@ -55,7 +55,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li id="wcons-topttl"><a href="/#"><i class="fas fa-hashtag"></i>nitetronic goodnite™: умная подушка от храпа</a></li>
-								<li><a href="/#"><i class="fas fa-phone"></i> +7 812 123 00 00</a></li>
+								<li><a href="/#"><i class="fas fa-phone"></i> <?php echo config('site.phone');?></a></li>
 								<li><a href="/#contact"><i class="fas fa-envelope" data-toggle="tooltip" title="Заполнить контактную форму"></i> info@mygoodnite.ru</a></li>
 							</ul>
 						</div>
