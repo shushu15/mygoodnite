@@ -170,7 +170,9 @@
 	Однако при наличии каких-либо особенностей у вашего организма или состояния вашего здоровья мы рекомендуем вам проконсультироваться с вашим врачом.</p>
 		
 		<p>
-	 <a href="/themes/my/assets/documents/Nitetronic goodnite инструкция на русском.doc" download><i class="fas fa-download fa-lg"></i> Загрузить руководство пользователя в формате Word <i class="fas fa-file-word fa-lg"></i></a> 
+	 <a href="/themes/my/assets/documents/Инструкция Анти-храп подушка.docx" download><i class="fas fa-download fa-lg"></i> Загрузить руководство пользователя подушки в формате Word <i class="fas fa-file-word fa-lg"></i></a> 
+	 </p><p>
+	 <a href="/themes/my/assets/documents/Инструкция Анти-храп устройство PAD.docx" download><i class="fas fa-download fa-lg"></i> Загрузить руководство пользователя устройства PAD в формате Word <i class="fas fa-file-word fa-lg"></i></a> 
 	 </p>
        </div>
 	   
