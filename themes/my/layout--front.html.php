@@ -357,6 +357,36 @@
 </section> <!-- advantage -->
 
 
+  <section id="announce">
+    <div class="container">
+      <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+        <div class="row">
+          <div class="text-center col-sm-8 col-sm-offset-2">
+            <h2>Новинка! Вариант исполнения - Анти-храп устройство под подушку PAD </h2>
+          </div>
+        </div> 
+      </div>
+      <div class="text-center our-services">
+        <div class="row">
+          <div class="col-sm-8 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="service-info">
+			  <h3>Превращает Вашу подушку в подушку против храпа Goodnite</h3>
+              <p>Активное устройство против храпа PAD подкладывается под Вашу подушку и имеет практически такую же функциональность, как и смарт-подушка Goodnite.
+			  Используется аналогичный механизм определения храпа и надувания камер активного вкладыша, но без интеграции в подушку. <a href="/pad-anti-snore">Подробнее об устройстве против храпа PAD</a>
+			  </p>
+            </div>
+          </div>
+          <div class="col-sm-4 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="450ms">
+            <div class="service-info">
+			<img class="img-responsive" src="<?php echo site_url();?>themes/my/assets/images/anti-snore-pad-pack.jpg" alt="PAD-устройство против храпа под подушку">
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
+</section> <!-- announce -->
+
+
   <section id="portfolio">
     <div class="container">
       <div class="row">

@@ -459,6 +459,18 @@ a.carousel-control.right { right: 0; background: none; border: 0;}
 }
 
 
+/*************************
+********Announce CSS*******
+**************************/
+#announce {
+	background-color: #eee;
+}
+#announce .service-info h3 {
+  margin-top: 0em;
+}
+#announce .service-info p {
+  text-align: justify;
+}
 
 
 
