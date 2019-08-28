@@ -7,6 +7,9 @@ config/users/
 # don't store content files
 content/
 
+# Google API key
+recaptchaid.php
+
 <<<<<<< HEAD
 =======
 

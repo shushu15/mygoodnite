@@ -274,23 +274,24 @@
 					$('#message1').val(''); 
 				}
 			},
-			error: function(response) { // Данные не отправлены
-				var jsonData = JSON.parse(response);
-				if(jsonData.error) {
-					form_status.html(`<p class="text-warning">${jsonData.error}</p>`).delay(3000).fadeOut();	
-				}
-				else if(jsonData.success) {
-					form_status.html(`<p class="text-warning">${jsonData.success}</p>`).delay(3000).fadeOut();	
-				} else {
-					form_status.html(`<p class="text-warning">Произошла ошибка при отправке сообщения</p>`).delay(3000).fadeOut();
-				}
+			error: function(XMLHttpRequest, textStatus, errorThrown) { // Данные не отправлены
+				//var jsonData = JSON.parse(response);
+				//if(jsonData.error) {
+				//	form_status.html(`<p class="text-warning">${jsonData.error}</p>`).delay(3000).fadeOut();	
+				//}
+				//else if(jsonData.success) {
+				//	form_status.html(`<p class="text-warning">${jsonData.success}</p>`).delay(3000).fadeOut();	
+				//} else {
+				//	form_status.html('<p class="text-warning">Произошла ошибка при отправке сообщения</p>').delay(3000).fadeOut();
+				//}
 
 				//if (response.responseText !== '') {
 				//	form_status.html('<p class="text-warning">${response.responseText}</p>').delay(3000).fadeOut();
 				//} else {
-				//	form_status.html('<p class="text-warning">Опс! Что-то пошло не так и нам не удалось доставить ваше сообщение.</p>').delay(3000).fadeOut();
+				form_status.html('<p class="text-warning">Произошла ошибка при отправке сообщения.</p>').delay(3000).fadeOut();
+				console.log(`Form error: ${textStatus}, ${errorThrown}`);
 				//}
-			}			
+			},
 		});
 	});
 
@@ -313,6 +314,7 @@
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Заказ отправляется...</p>').fadeIn() );
 			},
 			success: function(response) { //Данные отправлены успешно
+				//console.log(`Response: ${response}`);
 				var jsonData = JSON.parse(response);
 				if(jsonData.error) {
 					form_status.html(`<p class="text-warning">${jsonData.error}</p>`).delay(3000).fadeOut();	
@@ -324,17 +326,10 @@
 					}, 3000);
 				}
 			},			
-			error: function(response) { // Данные не отправлены
-				var jsonData = JSON.parse(response);
-				if(jsonData.error) {
-					form_status.html(`<p class="text-warning">${jsonData.error}</p>`).delay(3000).fadeOut();	
-				}
-				else if(jsonData.success) {
-					form_status.html(`<p class="text-warning">${jsonData.success}</p>`).delay(3000).fadeOut();	
-				} else {
-					form_status.html(`<p class="text-warning">Произошла ошибка при отправке заказа</p>`).delay(3000).fadeOut();
-				}
-			}
+			error: function(XMLHttpRequest, textStatus, errorThrown){ // Данные не отправлены
+				form_status.html('<p class="text-warning">Произошла ошибка при отправке заказа.</p>').delay(3000).fadeOut();
+				console.log(`Form error: ${textStatus}, ${errorThrown}`);
+			},
 
 
 		});

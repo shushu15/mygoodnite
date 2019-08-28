@@ -1,4 +1,8 @@
-﻿<?php
+<?php
+//ini_set("display_errors", 1);
+error_reporting(E_ALL);
+
+
 // function for reCapture processing
 function SiteVerify($url)
 {
@@ -11,6 +15,9 @@ function SiteVerify($url)
     curl_close($curl);
     return $curlData;
 }
+
+require('./recaptchaid.php');
+
     // Only process POST reqeusts.
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 
@@ -19,7 +26,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
  
         $google_url="https://www.google.com/recaptcha/api/siteverify";
-        $secret='6Lff-7QUAAAAAJ-7JwONp1S-c2qcbgB1t-Iwor0f';
+        $secret= $serverkey;
+// error_log("secret = $secret");
         $ip=$_SERVER['REMOTE_ADDR'];
         $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
         $res=SiteVerify($url);
@@ -28,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //var_dump($res);
         if($res['success'])
         {
+			error_log("success");
             // Проверка каптчи пройдена успешно, продолжаем дальше выполнение проверки формы и т.д.
             $name       = trim(htmlspecialchars($_POST['name'])); 
             $from       = trim(htmlspecialchars($_POST['email'])); 
@@ -49,9 +58,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             if (mail($to, $subject, $email_content, $email_headers)) {
                // Set a 200 (okay) response code.
                // http_response_code(200);
+			//error_log("error0-1");
 				$data = array('success' => 'Спасибо за сообщение. В ближайшее время мы свяжемся с Вами.');
 				echo json_encode($data);
             } else {
+			//error_log("error0-2");
               // Set a 500 (internal server error) response code.
                // http_response_code(500);
 			   $data = array('error' => 'Опс! Что-то пошло не так, и нам не удалось доставить ваше сообщение.');
@@ -60,15 +71,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         else
         {
+			//error_log("error1");
           // Проверка не пройдена
           // http_response_code(403);
 		  $data = array('error' => 'Подтвердите, что Вы не робот. Попробуйте еще раз.');
 		  echo json_encode($data);
+		  //error_log("error1-1" );
         }
  
     }
     else
     {
+			//error_log("error2");
           // Проверка не пройдена
           // http_response_code(403);
 		  $data = array('error' => 'Подтвердите, что Вы не робот. Поставьте галочку в поле reCaptcha.');
@@ -76,6 +90,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }    
 
 } else {
+			//error_log("error3");
     // Not a POST request, set a 403 (forbidden) response code.
     // http_response_code(403);
     $data = array('error' => 'При отправке сообщения возникли проблемы. Попробуйте еще раз.');

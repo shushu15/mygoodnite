@@ -1,4 +1,7 @@
-﻿<?php
+<?php
+//ini_set("display_errors", 1);
+error_reporting(E_ALL);
+
 function SiteVerify($url)
 {
     $curl = curl_init();
@@ -10,6 +13,9 @@ function SiteVerify($url)
     curl_close($curl);
     return $curlData;
 }
+
+require('./recaptchaid.php');
+
     // Only process POST reqeusts.
 if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 
@@ -18,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     {
  
         $google_url="https://www.google.com/recaptcha/api/siteverify";
-        $secret='6Lff-7QUAAAAAJ-7JwONp1S-c2qcbgB1t-Iwor0f';
+        $secret= $serverkey;
         $ip=$_SERVER['REMOTE_ADDR'];
         $url=$google_url."?secret=".$secret."&response=".$recaptcha."&remoteip=".$ip;
         $res=SiteVerify($url);
