@@ -25,6 +25,7 @@
   <link rel="mask-icon" href="<?php echo site_url();?>themes/my/assets/images/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">  
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>  
 
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -635,7 +636,8 @@
 						required="required" />
 						<span class="validity"></span>
 						<textarea name="message" id="message" class="form-control" rows="4" placeholder="Комментарий к заказу"></textarea>
-					</div>                        
+            <div class="g-recaptcha" data-sitekey="6Lff-7QUAAAAAIUPwCbMD7lmFiFm8E7_3Km6Lng8"></div>                                           
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
@@ -765,7 +767,8 @@
                 </div>
                 <div class="form-group">
                   <textarea name="message" id="message1" class="form-control" rows="4" placeholder="Напишите сообщение" required="required"></textarea>
-                </div>                        
+                </div> 
+                <div class="g-recaptcha" data-sitekey="6Lff-7QUAAAAAIUPwCbMD7lmFiFm8E7_3Km6Lng8"></div>                       
                 <div class="form-group">
                   <button type="submit" class="btn btn-submit">Отправить</button>
                 </div>
