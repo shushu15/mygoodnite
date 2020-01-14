@@ -838,7 +838,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-6">
-            <p>&copy; 2018-2019 MyGoodnite. Smart-подушка от храпа.</p>
+            <p>&copy; <?php echo config('site.copyright.year') ?> MyGoodnite. Smart-подушка от храпа.</p>
           </div>
           <div class="col-sm-6">
             <p class="pull-right">Разработка <a href="<?php echo site_url();?>">#MYGOODNITE</a></p>
