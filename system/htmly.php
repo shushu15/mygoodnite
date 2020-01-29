@@ -1992,7 +1992,8 @@ get('/post/:name', function ($name) {
     }
     
     if (config('blog.enable') === 'true') {
-        $blog = ' <span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . 'blog">'.i18n('Blog').'</a></span> &#187; ';
+//        $blog = ' <span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . 'blog">'.i18n('Blog').'</a></span> &#187; ';
+        $blog = ' <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . 'blog"><span itemprop="name">'.i18n('Blog').'</span></a></span> &#187; ';
     } else {
         $blog = '';
     }
@@ -2029,7 +2030,8 @@ get('/post/:name', function ($name) {
         'p' => $current,
         'author' => $author,
         'bodyclass' => 'in-post category-' . $current->ct . ' type-' . $current->type,
-        'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; '. $blog . '<span typeof="v:Breadcrumb">' . $current->categoryb . '</span>' . ' &#187; ' . $current->title,
+        'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span> &#187; '. $blog . '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">' . $current->categoryb . '</span></span>' . ' &#187; ' . $current->title,
+        //'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; '. $blog . '<span typeof="v:Breadcrumb">' . $current->categoryb . '</span>' . ' &#187; ' . $current->title,
         'prev' => has_prev($prev),
         'next' => has_next($next),
         'type' => $var,
@@ -2081,7 +2083,9 @@ get('/post/:name/edit', function ($name) {
                 'type' => $type,
                 'is_admin' => true,
                 'bodyclass' => 'edit-post',
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				
             ));
         } else {
             render('denied', array(
@@ -2091,7 +2095,8 @@ get('/post/:name/edit', function ($name) {
                 'p' => $current,
                 'bodyclass' => 'denied',
                 'is_admin' => true,
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
             ));
         }
     } else {
@@ -2273,7 +2278,9 @@ get('/post/:name/delete', function ($name) {
                 'p' => $current,
                 'is_admin' => true,
                 'bodyclass' => 'delete-post',
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+
             ));
         } else {
             render('denied', array(
@@ -2283,7 +2290,9 @@ get('/post/:name/delete', function ($name) {
                 'p' => $current,
                 'is_admin' => true,
                 'bodyclass' => 'delete-post',
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				
             ));
         }
     } else {
@@ -2976,7 +2985,8 @@ get('/:year/:month/:name', function ($year, $month, $name) {
     }
     
     if (config('blog.enable') === 'true') {
-        $blog = ' <span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . 'blog">Blog</a></span> &#187; ';
+//        $blog = ' <span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . 'blog">Blog</a></span> &#187; ';
+        $blog = ' <span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . 'blog"><span itemprop="name">'.i18n('Blog').'</span></a></span> &#187; ';
     } else {
         $blog = '';
     }
@@ -3013,7 +3023,8 @@ get('/:year/:month/:name', function ($year, $month, $name) {
         'p' => $current,
         'author' => $author,
         'bodyclass' => 'in-post category-' . $current->ct . ' type-' . $current->type,
-        'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; '. $blog . '<span typeof="v:Breadcrumb">' . $current->categoryb . '</span>' . ' &#187; ' . $current->title,
+        // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; '. $blog . '<span typeof="v:Breadcrumb">' . $current->categoryb . '</span>' . ' &#187; ' . $current->title,
+        'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span> &#187; '. $blog . '<span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">' . $current->categoryb . '</span></span>' . ' &#187; ' . $current->title,
         'prev' => has_prev($prev),
         'next' => has_next($next),
         'type' => $var,
@@ -3065,7 +3076,9 @@ get('/:year/:month/:name/edit', function ($year, $month, $name) {
                 'type' => $type,
                 'bodyclass' => 'edit-post',
                 'is_admin' => true,
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				
             ));
         } else {
             render('denied', array(
@@ -3075,7 +3088,9 @@ get('/:year/:month/:name/edit', function ($year, $month, $name) {
                 'p' => $current,
                 'bodyclass' => 'denied',
                 'is_admin' => true,
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				
             ));
         }
     } else {
@@ -3257,7 +3272,8 @@ get('/:year/:month/:name/delete', function ($year, $month, $name) {
                 'p' => $current,
                 'bodyclass' => 'delete-post',
                 'is_admin' => true,
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
             ));
         } else {
             render('denied', array(
@@ -3267,7 +3283,8 @@ get('/:year/:month/:name/delete', function ($year, $month, $name) {
                 'p' => $current,
                 'bodyclass' => 'delete-post',
                 'is_admin' => true,
-                'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+                // 'breadcrumb' => '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . site_url() . '">' . config('breadcrumb.home') . '</a></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
+				'breadcrumb' => ' <span itemscope itemtype="http://schema.org/BreadcrumbList"><span itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a itemprop="url" href="' . site_url() . '"><span itemprop="name">'. config('breadcrumb.home') . '</span></a></span></span> &#187; ' . $current->tagb . ' &#187; ' . $current->title
             ));
         }
     } else {
