@@ -346,6 +346,7 @@ function get_posts($posts, $page = 1, $perpage = 0)
         foreach ($tag as $a) {
             $url[] = '<a rel="tag" href="' . $a[1] . '">' . $a[0] . '</a>';
             $bc[] = '<span typeof="v:Breadcrumb"><a property="v:title" rel="v:url" href="' . $a[1] . '">' . $a[0] . '</a></span>';
+
         }
 
         $post->tag = implode(' ', $url);
